@@ -6,5 +6,9 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: "Gatsby Project",
+    description: "Site made for practising gatsby",
+  },
+  plugins: ["gatsby-plugin-emotion", "gatsby-plugin-react-helmet"],
 }
