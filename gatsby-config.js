@@ -14,12 +14,20 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-react-helmet",
     {
-      resolve: "gatsby-plugin-mdx",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        defaultLayouts: {
-          default: require.resolve("./src/components/layout.js"),
-        },
+        name: `mdx`,
+        path: `${__dirname}/posts`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    "gatsby-plugin-mdx",
+    "gatsby-transformer-remark",
   ],
 }
